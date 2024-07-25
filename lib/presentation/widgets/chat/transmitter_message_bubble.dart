@@ -30,16 +30,16 @@ class TransmitterMessageBubble extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        
-        // const _ImageBubble(),
-        // const SizedBox(height: 10),
+        _ImageBubble(url: message.imgUrl!),
+        const SizedBox(height: 10),
       ],
     );
   }
 }
 
 class _ImageBubble extends StatelessWidget {
-  const _ImageBubble();
+  final String url;
+  const _ImageBubble({required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _ImageBubble extends StatelessWidget {
     return ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: Image.network(
-          'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fgithub%2Fgithub_PNG90.png&f=1&nofb=1&ipt=074cdc5c6e8c5e2efc8a8e32379c555d00c8dbe44e7a199581dd906a70df3ab9&ipo=images',
+          url,
           width: size.width * 0.5,
           height: 200,
           fit: BoxFit.cover,
