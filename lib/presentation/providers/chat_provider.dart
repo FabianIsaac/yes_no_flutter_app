@@ -10,7 +10,7 @@ class ChatProvider extends ChangeNotifier {
     Message(text: 'Iniciando chat', fromWho: FromWho.me),
     Message(
         text:
-            'Recuerda que para obtener una respuesta, debes hacer una pregunta!',
+            'Recuerda que para obtener una respuesta, debes hacer una pregunta cerrada!',
         fromWho: FromWho.me),
   ];
 
